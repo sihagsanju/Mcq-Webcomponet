@@ -21,9 +21,9 @@ export class PlaybackComponent {
   @Output() action = new EventEmitter<any>();
 
   // @Input() title: string;
-  @Input() 
+  @Input()
   set question(value: string) {
-    console.log('This is the question response', JSON.parse(value));
+    console.log('This is the question response In MCQ', JSON.parse(value));
     this.questionObject = JSON.parse(value);
     const converter = new showdown.Converter({
       extensions: [showdownHighlight],
